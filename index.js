@@ -43,8 +43,8 @@ client.on('message', (message) => {
     let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
     embed.setColor('#186de6')
-    embed.setAuthor('server info of 콜라곰 BOT', img)
-    embed.setFooter(`콜라곰 BOT ❤️`)
+    embed.setAuthor('server info of 신시우', img)
+    embed.setFooter(`신시우 ❤️`)
     embed.addBlankField()
     embed.addField('RAM usage',    `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true);
     embed.addField('running time', `${duration}`, true);
@@ -69,12 +69,12 @@ client.on('message', (message) => {
     message.channel.send(embed);
   }
 
-  if(message.content == 'embed') {
+  if(message.content == '!신시우') {
     let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
     let embed = new Discord.RichEmbed()
-      .setTitle('타이틀')
-      .setURL('http://www.naver.com')
-      .setAuthor('나긋해', img, 'http://www.naver.com')
+      .setTitle('신시우로 가기')
+      .setURL('http://www.youtube.com/channel/UCMlTCWzdbgC6BRwxT9gAv6A')
+      .setAuthor('신시우', img, 'http://www.youtube.com/channel/UCMlTCWzdbgC6BRwxT9gAv6A')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
@@ -84,7 +84,7 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('나긋해가 만듬', img)
+      .setFooter('신시우가 만듬', img)
 
     message.channel.send(embed)
   } else if(message.content == '!help') {
@@ -101,9 +101,9 @@ client.on('message', (message) => {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setAuthor('Help of 신시우', helpImg)
       .setColor('#186de6')
-      .setFooter(`콜라곰 BOT ❤️`)
+      .setFooter(`신시우 ❤️`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -143,9 +143,9 @@ client.on('message', (message) => {
     if(message.member != null) { // 채널에서 공지 쓸 때
       let contents = message.content.slice('!전체공지2'.length);
       let embed = new Discord.RichEmbed()
-        .setAuthor('공지 of 콜라곰 BOT')
+        .setAuthor('공지 of 신시우')
         .setColor('#186de6')
-        .setFooter(`콜라곰 BOT ❤️`)
+        .setFooter(`신시우 ❤️`)
         .setTimestamp()
   
       embed.addField('공지: ', contents);
@@ -185,7 +185,7 @@ client.on('message', (message) => {
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
       message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
       return;
-    } else if(!isNum) { // c @나긋해 3
+    } else if(!isNum) { // c @신시우 3
       if(message.content.split('<@').length == 2) {
         if(isNaN(message.content.split(' ')[2])) return;
 
