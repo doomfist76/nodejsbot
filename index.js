@@ -72,7 +72,7 @@ client.on('message', (message) => {
   if(message.content == '!신시우') {
     let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
     let embed = new Discord.RichEmbed()
-      .setTitle('신시우로 가기')
+      .setTitle('신1시우로 가기')
       .setURL('http://www.youtube.com/channel/UCMlTCWzdbgC6BRwxT9gAv6A')
       .setAuthor('신시우', img, 'http://www.youtube.com/channel/UCMlTCWzdbgC6BRwxT9gAv6A')
       .setThumbnail(img)
